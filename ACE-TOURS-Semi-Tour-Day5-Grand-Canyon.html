@@ -31,7 +31,7 @@
       <div class="eyebrow">Arizona · Grand Circle</div>
       <h1 id="page-title">Grand Canyon<br><em>Day.</em></h1>
       <p class="hero-sub">그랜드캐년 · 홀슈밴드 · 앤텔롭캐년, 1박 2일의 시작</p>
-      <div class="hero-date"><span>2026. 09. 29. 화요일</span><span>전연령 세미투어 · 5일차 여행 안내</span></div>
+      <div class="hero-date"><span>2026. 10. 06. 화요일</span><span>전연령 세미투어 · 5일차 여행 안내</span></div>
     </div>
     <span class="photo-credit">ACE TOURS Travel Visual</span>
   </section>
@@ -41,12 +41,12 @@
       <div class="weather-heading"><div><h2 id="weather-title">그랜드캐년 날씨</h2><p>South Rim · 미국 애리조나 시간</p></div><button class="refresh" id="refresh" type="button">↻ 새로고침</button></div>
       <div class="weather-grid">
         <article class="weather-cell"><div class="weather-label">현재 날씨 <span id="current-date">현지 날짜 확인 중</span></div><div class="weather-value"><div class="weather-icon" id="current-icon" aria-hidden="true"></div><div><strong id="current-temp" class="loading">—<small> °C</small></strong><div class="condition" id="current-desc">날씨를 불러오는 중</div></div></div><div class="weather-details"><span>체감 <b id="feels">—</b></span><span>바람 <b id="wind">—</b></span><span>습도 <b id="humidity">—</b></span></div></article>
-        <article class="weather-cell"><div class="weather-label">일정일 예보 <span id="trip-date">9월 29일 (화)</span></div><div class="weather-value"><div class="weather-icon" id="trip-icon" aria-hidden="true"></div><div><strong id="trip-temp" class="loading">—<small> °C</small></strong><div class="condition" id="trip-desc">최고 기온 · 확인 중</div></div></div><div class="weather-details"><span>최저 <b id="low">—</b></span><span>강수 확률 <b id="rain">—</b></span><span>자외선 지수 <b id="uv">—</b></span></div></article>
+        <article class="weather-cell"><div class="weather-label">일정일 예보 <span id="trip-date">10월 6일 (화)</span></div><div class="weather-value"><div class="weather-icon" id="trip-icon" aria-hidden="true"></div><div><strong id="trip-temp" class="loading">—<small> °C</small></strong><div class="condition" id="trip-desc">최고 기온 · 확인 중</div></div></div><div class="weather-details"><span>최저 <b id="low">—</b></span><span>강수 확률 <b id="rain">—</b></span><span>자외선 지수 <b id="uv">—</b></span></div></article>
       </div>
-      <div class="weather-footer"><p class="weather-status" id="weather-status" role="status" aria-live="polite">최신 날씨를 확인하고 있습니다.</p><a href="https://open-meteo.com/" target="_blank" rel="noopener">날씨 제공: Open-Meteo</a><span>일정일 예보 · 9월 29일</span></div>
+      <div class="weather-footer"><p class="weather-status" id="weather-status" role="status" aria-live="polite">최신 날씨를 확인하고 있습니다.</p><a href="https://open-meteo.com/" target="_blank" rel="noopener">날씨 제공: Open-Meteo</a><span>일정일 예보 · 10월 6일</span></div>
     </section>
 
-    <section class="intro-row"><div><div class="section-kicker">CITY LIGHTS TO CANYON</div><h2>라스베가스의 불빛을 뒤로하고,<br>내일부터 대자연 속으로 들어갑니다.</h2></div><div class="departure"><div><small>9월 29일 · 오전 정각 출발</small><strong>06:00</strong></div><div class="meeting"><b>오늘 내린 장소 · 스타벅스 로비</b><span class="pill">시간 엄수 · 짐과 소지품 확인</span></div></div></section>
+    <section class="intro-row"><div><div class="section-kicker">CITY LIGHTS TO CANYON</div><h2>라스베가스의 불빛을 뒤로하고,<br>내일부터 대자연 속으로 들어갑니다.</h2></div><div class="departure"><div><small>10월 6일 · 오전 정각 출발</small><strong>06:00</strong></div><div class="meeting"><b>오늘 내린 장소 · 스타벅스 로비</b><span class="pill">시간 엄수 · 짐과 소지품 확인</span></div></div></section>
 
     <div class="content-grid">
       <div>
@@ -92,7 +92,7 @@
   <script>
 const $=id=>document.getElementById(id);
 const tz='America/Phoenix';
-const tripDate='2026-09-29';
+const tripDate='2026-10-06';
 const api='https://api.open-meteo.com/v1/forecast?latitude=36.0544&longitude=-112.1401&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,uv_index_max&timezone=America%2FPhoenix&forecast_days=16';
 const dateKey=(date=new Date())=>new Intl.DateTimeFormat('en-CA',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit'}).format(date);
 function label(key){return new Intl.DateTimeFormat('ko-KR',{timeZone:'UTC',month:'long',day:'numeric',weekday:'short'}).format(new Date(key+'T12:00:00Z'))}
